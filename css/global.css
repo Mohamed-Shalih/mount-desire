@@ -1,0 +1,263 @@
+/* @format */
+html {
+    scroll-behavior: smooth;
+  }
+  * {
+    font-family: var(--font1);
+    margin: 0;
+    padding: 0;
+    color: var(--color3);
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --buttonColor: #000;
+    --color1: #141414;
+    --color2: #fff;
+    --color3: #525252;
+    --font1: "Lato", sans-serif;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    color: var(--color3);
+  }
+  .show {
+    display: block !important;
+  }
+  .hide {
+    display: none !important;
+  }
+  .row {
+    margin: 0;
+  }
+
+ /* scroll down button  */
+  a.scroll-down-button {
+    padding-top: 60px;
+    display: block;
+    position: relative;
+  }
+  a.scroll-down-button span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 45px;
+    height: 75px;
+    margin-left: -15px;
+    border: 2px solid #eed088;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  a.scroll-down-button span::before {
+    position: absolute;
+    top: 8px;
+    left: 39%;
+    transform: translateY(-50%);
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    -webkit-animation: scroll-down-button 2s infinite;
+    animation: scroll-down-button 2s infinite;
+    box-sizing: border-box;
+    background-color: #c9af71;
+  }
+  @-webkit-keyframes scroll-down-button {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 30px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes scroll-down-button {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 30px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+/* scroll down button */
+
+/* Button.LearnMore */
+button.learn-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 11rem;
+    height: auto;
+  }
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+  
+    background: var(--buttonColor);
+    border-radius: 1.625rem;
+  }
+  
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.45rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    padding-left: 20px;
+    margin: 0 0 0 1.85rem;
+    color: var(--color1);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  button.learn-more:hover .circle {
+    width: 100%;
+  }
+  
+  button.learn-more:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  
+  button.learn-more:hover .button-text {
+    color: #fff;
+  }
+  @media (max-width: 576px) {
+    button.learn-more {
+      width: 9rem;
+    }
+    button.learn-more .circle {
+      width: 1.8em;
+      height: 1.8em;
+    }
+    button.learn-more .button-text {
+      font-size: 0.7em;
+      padding-left: 12px;
+    }
+    button.learn-more .circle .icon.arrow::before {
+      position: absolute;
+      content: "";
+      top: -0.2em;
+      right: 0rem;
+      width: 0.5em;
+      height: 0.5em;
+    }
+    button.learn-more .circle .icon.arrow {
+      width: 0.7rem;
+    }
+  }
+/* Button.LearnMore /
+
+/* Common Elements */
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section {
+    padding: 1rem 0;
+    position: relative;
+    z-index: 2;
+  }
+  .title-h4 {
+    font-size: 1.1em;
+    color: var(--color1);
+    margin-bottom: 0.9em;
+  }
+  .title-h2 {
+    font-size: 2.3em;
+    color: var(--color3);
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  .common-p {
+    color: #575656;
+    line-height: 1.7em;
+    margin-bottom: 3em;
+    font-size: 1em;
+  }
+  @media (max-width: 576px) {
+    .title-h4 {
+      font-size: 1em;
+    }
+    .title-h2 {
+      font-size: 2em;
+    }
+    .common-p {
+      font-size: 0.9em;
+    }
+  }
+/* #Common Elements */
